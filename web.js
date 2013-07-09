@@ -5,10 +5,8 @@ var app = express.createServer(express.logger());
 var buf = new Buffer();
 var contents = fs.readFileSync('index.html');
 
-var return = buf.write(contents);
-
 app.get('/', function(request, response) {
-  response.send("Hello World updating");
+  response.send(contents);
 });
 
 var port = process.env.PORT || 5000;
