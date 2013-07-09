@@ -1,8 +1,8 @@
-#!/usr/bin/env node
 var express = require('express');
 
 var app = express.createServer(express.logger());
-var buf = new Buffer();
+//var buf = new Buffer();
+var contents = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
   response.send("Hello World updating");
