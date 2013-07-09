@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 //var buffer = new Buffer();
 
-//var contents = buf.toString(fs.readFileSync('index.html'));
+var contents = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
   response.send("Hello World updating");
